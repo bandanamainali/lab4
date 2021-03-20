@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>SIMPLE CALCULATION</title>
+
+  <style>
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 0px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+
+    td {
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h3 align="center">Simple Math calculation by DOM</h3>
+  <table align="center">
+    <tr>
+      <td>Num1: </td>
+      <td colspan="4"><input type="text" id="num1"></td>
+    </tr>
+    <tr>
+      <td>Num2: </td>
+      <td colspan="4"><input type="text" id="num2"></td>
+    </tr>
+    <tr>
+      <td>Result: </td>
+      <td colspan="4"><input type="text" id="result" readonly></td>
+    </tr>
+    <tr>
+      <td>Actions: </td>
+      <td><button onclick="add()"> Add </button></td>
+      <td><button onclick="subt()"> Subract </button></td>
+      <td><button onclick="div()"> Divide </button></td>
+      <td><button onclick="mul()"> Multiply </button></td>
+    </tr>
+  </table>
+  <script src="js/script.js"></script>
+  function add() {
+  let num1 = document.getElementById('num1').value;
+  let num2 = document.getElementById('num2').value;
+  document.getElementById('result').value = Number(num1) + Number(num2);
+}
+
+function subt() {
+  let num1 = document.getElementById('num1').value;
+  let num2 = document.getElementById('num2').value;
+  document.getElementById('result').value = Number(num1) - Number(num2);
+}
+
+function div() {
+  let num1 = document.getElementById('num1').value;
+  let num2 = document.getElementById('num2').value;
+  document.getElementById('result').value = `${num1}/${num2}: ${Number(num1) / Number(num2)} & ${num2}/${num1}: ${Number(num2) / Number(num1)}`;
+}
+
+function mul() {
+  let num1 = document.getElementById('num1').value;
+  let num2 = document.getElementById('num2').value;
+  document.getElementById('result').value = Number(num1) * Number(num2);
+}
+</body>
+
+</html>
